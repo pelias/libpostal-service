@@ -5,4 +5,6 @@
 
 # Pelias Libpostal Service
 
-This is a `Dockerfile` for creating an instance of the [whosonfirst/go-whosonfirst-libpostal](https://github.com/whosonfirst/go-whosonfirst-libpostal#wof-libpostal-server) server for use by Pelias. There's no actaul code here
+This is a `Dockerfile` for creating an instance of the [whosonfirst/go-whosonfirst-libpostal](https://github.com/whosonfirst/go-whosonfirst-libpostal#wof-libpostal-server) server for use by Pelias. There's no actual code here.
+
+To use the libpostal-service outside of Docker, see the [install instructions](https://github.com/whosonfirst/go-whosonfirst-libpostal#install) for the whosonfirst/go-whosonfirst-libpostal project.
