@@ -14,7 +14,7 @@ To use the libpostal-service outside of Docker, see the [install instructions](h
 ## Example usage
 
 ```
-docker run -d -p 4400 pelias/libpostal-service
+docker run -d -p 4400:4400 pelias/libpostal-service
 
 # wait a few seconds for libpostal to come up
 
