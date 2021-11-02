@@ -35,7 +35,7 @@ To use the libpostal-service outside of Docker, see the [install instructions](h
 
 Generally, this project is used automatically by the [pelias/docker](http://github.com/pelias/docker/) repository.
 
-To run the Libpostal service manually for advanced usage, you can do something like the following:
+To run the Libpostal service manually, you can do something like the following:
 
 ```
 docker run -d -p 4400:4400 pelias/libpostal-service
