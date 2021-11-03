@@ -1,6 +1,8 @@
 # build the libpostal-server binary separately
 FROM pelias/libpostal_baseimage as builder
 
+RUN apt-get update && apt-get install -y make pkg-config
+
 # install go
 RUN curl https://dl.google.com/go/go1.11.linux-amd64.tar.gz | tar -C /usr/local -xz
 ENV PATH="$PATH:/usr/local/go/bin"
@@ -14,6 +16,8 @@ RUN make bin
 FROM pelias/libpostal_baseimage
 
 COPY --from=builder /code/go-whosonfirst-libpostal/bin/wof-libpostal-server /bin/
+
+RUN ldconfig
 
 USER pelias
 
