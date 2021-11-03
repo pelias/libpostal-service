@@ -17,6 +17,8 @@ FROM pelias/libpostal_baseimage
 
 COPY --from=builder /code/go-whosonfirst-libpostal/bin/wof-libpostal-server /bin/
 
+RUN ldconfig
+
 USER pelias
 
 ENV PORT 4400
