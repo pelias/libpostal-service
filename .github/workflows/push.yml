@@ -2,9 +2,7 @@ name: Continuous Integration
 on: push
 jobs:
   build-docker-images:
-    # run this job if the unit tests passed and the npm-publish job was a success or was skipped
-    # note: github actions won't run a job if you don't call one of the status check functions, so `always()` is called since it evalutes to `true`
-    runs-on: ubuntu-20.04
+    runs-on: ${{ vars.UBUNTU_VERSION }}
     steps:
       - uses: actions/checkout@v2
       - name: Build Docker images
