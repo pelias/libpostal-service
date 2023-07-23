@@ -1,7 +1,7 @@
 # build the libpostal-server binary separately
 FROM pelias/libpostal_baseimage as builder
 
-RUN apt-get update && apt-get install -y make pkg-config
+RUN apt-get update && apt-get install -y make pkg-config build-essential
 
 # install go
 RUN curl https://dl.google.com/go/go1.11.linux-amd64.tar.gz | tar -C /usr/local -xz
