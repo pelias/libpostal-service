@@ -4,7 +4,8 @@ FROM pelias/libpostal_baseimage as builder
 RUN apt-get update && apt-get install -y make pkg-config build-essential
 
 # install go
-RUN curl https://dl.google.com/go/go1.11.linux-amd64.tar.gz | tar -C /usr/local -xz
+ARG TARGETPLATFORM
+RUN curl "https://dl.google.com/go/go1.11.linux-${TARGETPLATFORM##*/}.tar.gz" | tar -C /usr/local -xz
 ENV PATH="$PATH:/usr/local/go/bin"
 
 # bring in and build project go code
