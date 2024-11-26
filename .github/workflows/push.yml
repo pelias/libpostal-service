@@ -4,7 +4,7 @@ jobs:
   build-docker-images:
     runs-on: ${{ vars.UBUNTU_VERSION }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Build Docker images
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
