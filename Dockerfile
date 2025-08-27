@@ -16,7 +16,7 @@ RUN git clone https://github.com/whosonfirst/go-whosonfirst-libpostal.git .
 RUN GO111MODULE=off make bin
 
 # start of main image
-FROM pelias/libpostal_baseimage
+FROM pelias/libpostal_baseimage:nodejs-20
 
 COPY --from=builder /code/go-whosonfirst-libpostal/bin/wof-libpostal-server /bin/
 
