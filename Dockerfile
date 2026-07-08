@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y make pkg-config build-essential
 
 # install Golang
 ARG TARGETARCH
-RUN wget -qO- "https://golang.org/dl/go1.21.0.linux-${TARGETARCH}.tar.gz" | tar -C /usr/local -xzf -
+RUN wget -qO- "https://golang.org/dl/go1.26.5.linux-${TARGETARCH}.tar.gz" | tar -C /usr/local -xzf -
 ENV GOROOT="/usr/local/go"
 ENV GOPATH="$HOME/go"
 ENV PATH="${PATH}:$GOROOT/bin:$GOPATH/bin"
